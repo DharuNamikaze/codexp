@@ -26,13 +26,13 @@ export default function Timeline() {
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`relative flex flex-col items-center ${index === activeStep ? "text-blue-500" : "text-gray-500"}`}
+            className={`relative flex flex-col items-center mx-4 transition-all ${index === activeStep ? "text-blue-500" : "text-gray-500"}`}
             onClick={() => setActiveStep(index)}
           >
             <div
-              className={`w-8 h-8 rounded-full border-2 ${index === activeStep ? "bg-blue-500 border-blue-500" : "bg-white border-gray-500"} cursor-pointer transition-all`}
+              className={`border-2 w-8 h-8 border-blue-400 ${index === activeStep ? "bg-blue-500 border-blue-400 rounded-full" : "bg-white border-black btn-circle"} cursor-pointer transition-all`}
             ></div>
-            <p className="mt-2">{step.name}</p>
+            <p className="mt-8">{step.name}</p>
             {index === activeStep && (
               <div className="mt-4 p-4 bg-white shadow-lg rounded-lg max-w-xs mx-auto">
                 <p>{step.description}</p>

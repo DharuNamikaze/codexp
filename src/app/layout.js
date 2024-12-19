@@ -1,12 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+// app/layout.jsx
+'use client';
+import './globals.css';
+import Link from 'next/link';
+import { useState, useLayoutEffect } from 'react';
 
-const layout = props => {
+export default function RootLayout({ children }) {
   return (
-    <div>layout</div>
-  )
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
+  );
 }
-
-layout.propTypes = {}
-
-export default layout
