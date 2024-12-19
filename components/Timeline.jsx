@@ -8,7 +8,8 @@ export default function Timeline() {
   const steps = [
     { name: "Front-End", description: "Learn HTML, CSS, JavaScript, React, and more!" },
     { name: "Back-End", description: "Master Node.js, Express, Databases, and API creation." },
-    { name: "Database (SQL/NoSQL)", description: "Learn MySQL, MongoDB, and how to work with databases." },
+    { name: "Database", description: "Learn MySQL, MongoDB, and how to work with databases." },
+    { name: "UI/UX", description: "Learn Adobe Illustrator, Figma to create stunning visuals" },
   ];
 
   return (

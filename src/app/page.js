@@ -40,7 +40,6 @@ export default function Home() {
           Experience the future of learning with a fun, interactive platform.
         </p>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-         
         </div>
       </section>
 
