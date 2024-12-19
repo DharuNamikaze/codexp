@@ -63,22 +63,10 @@ Open your browser and navigate to:
 
 http://localhost:3000
 
-Project Structure
-
-src
-├── app
-│   ├── page.js        # Main entry point for the web app
-│   └── components     # Reusable components (e.g., Timeline, Navbar)
-├── assets             # Static assets (e.g., images, videos)
-public
-├── assets             # Publicly accessible static files
-.env                   # Environment variables
-package.json           # Dependencies and scripts
-
 Contact
 
 For questions or feedback, reach out to:
 
-Email: your-email@example.com
+Email: dharunamikaze@gmail.com
 
-GitHub: your-username
+GitHub: DharuNamikaze
