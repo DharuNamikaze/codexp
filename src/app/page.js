@@ -44,7 +44,7 @@ export default function Home() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="text-white text-center py-16">
+      <section className="text-white text-center  py-16">
         <h2 className="text-3xl font-semibold">Ready to Start Your Learning Journey?</h2>
         <p className="mt-4 text-lg">
           Join <strong style={{color:'#683aae'}}>CodeXP</strong> now and start building your future with personalized lessons.
