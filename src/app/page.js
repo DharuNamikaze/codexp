@@ -47,11 +47,15 @@ export default function Home() {
       <section className="text-white text-center  py-16">
         <h2 className="text-3xl font-semibold">Ready to Start Your Learning Journey?</h2>
         <p className="mt-4 text-lg">
-          Join <strong style={{color:'#683aae'}}>CodeXP</strong> now and start building your future with personalized lessons.
+          Join <strong style={{color:'#683aae'}}>CodeXP</strong> now and start building your skills with personalized lessons.
         </p>
-        <button className="mt-8">
+       
+        <button className="mt-8 learn-more">
+          <span className="circle" aria-hidden="true">
+            <span className="icon arrow"></span>
+            </span>
             <Link href="components/MainPage.jsx"
-              className="box text-white hover:text-violet-700">
+              className="button-text text-white ">
               Get Started
             </Link>
           </button>
