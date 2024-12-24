@@ -1,7 +1,7 @@
 
 import Link from "next/link";
+import Loginpage from "../../pages/loginpage";
 import Timeline from "../../components/Timeline";
-import MainPage from "../../components/MainPage";
 export default function Home() {
   return (
     <div>
@@ -49,18 +49,18 @@ export default function Home() {
         <p className="mt-4 text-lg">
           Join <strong style={{color:'#683aae'}}>CodeXP</strong> now and start building your skills with personalized lessons.
         </p>
-       
+
         <button className="mt-8 learn-more">
           <span className="circle" aria-hidden="true">
             <span className="icon arrow"></span>
             </span>
-            <Link href="components/MainPage.jsx"
+            <Link href="pages/loginpage.js"
               className="button-text text-white ">
               Get Started
             </Link>
           </button>
-      </section>
 
+      </section>
       {/* Footer  */}
       <footer className="bg-gray-900 text-white py-12 text-center">
         <p>&copy; {new Date().getFullYear()} CodeXP. All rights reserved.</p>
