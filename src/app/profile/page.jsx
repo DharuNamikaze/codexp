@@ -1,5 +1,4 @@
-
-import { auth, signIn, signOut} from "@/auth"
+import { signIn } from "@/auth"
  
 export default function SignIn() {
   return (
@@ -12,4 +11,4 @@ export default function SignIn() {
       <button type="submit">Signin with Google</button>
     </form>
   )
-} 
+}

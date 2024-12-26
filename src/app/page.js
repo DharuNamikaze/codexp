@@ -1,6 +1,4 @@
-
 import Link from "next/link";
-import Loginpage from "../../pages/loginpage";
 import Timeline from "../../components/Timeline";
 export default function Home() {
   return (
@@ -44,24 +42,24 @@ export default function Home() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="text-white text-center  py-16">
-        <h2 className="text-3xl font-semibold">Ready to Start Your Learning Journey?</h2>
-        <p className="mt-4 text-lg">
-          Join <strong style={{color:'#683aae'}}>CodeXP</strong> now and start building your skills with personalized lessons.
-        </p>
+        <section className="text-white text-center  py-16">
+          <h2 className="text-3xl font-semibold">Ready to Start Your Learning Journey?</h2>
+          <p className="mt-4 text-lg">
+            Join <strong style={{color:'#683aae'}}>CodeXP</strong> now and start building your skills with personalized lessons.
+          </p>
 
-        <button className="mt-8 learn-more">
-          <span className="circle" aria-hidden="true">
-            <span className="icon arrow"></span>
-            </span>
-            <Link href="pages/loginpage.js"
-              className="button-text text-white ">
-              Get Started
-            </Link>
-          </button>
+          <button className="mt-8 learn-more">
+            <span className="circle" aria-hidden="true">
+          <span className="icon arrow"></span>
+          </span>
+          <Link href="/loginpage"
+            className="button-text text-white ">
+            Get Started
+          </Link>
+            </button>
 
-      </section>
-      {/* Footer  */}
+        </section>
+        {/* Footer  */}
       <footer className="bg-gray-900 text-white py-12 text-center">
         <p>&copy; {new Date().getFullYear()} CodeXP. All rights reserved.</p>
         <div className="mt-4 ">

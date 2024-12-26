@@ -1,8 +1,7 @@
-// components/Login.js
-export default function Loginpage() {
-
-  return (
-    <section>Hi
-    </section>
-  );
+//pages/login
+function Login(){
+  return (<>
+  <div>Hi</div>
+  </>);
 }
+export default Login;
