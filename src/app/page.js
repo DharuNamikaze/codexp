@@ -3,7 +3,7 @@ import Timeline from "../../components/Timeline";
 export default function Home() {
   return (
     <div>
-      
+    
       {/* Hero Section with Background Video */}
       <section className="relative text-white text-center py-24">
         {/* Background Video */}
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         </div>
       </section>
-
+      
       {/* Call to Action Section */}
         <section className="text-white text-center  py-16">
           <h2 className="text-3xl font-semibold">Ready to Start Your Learning Journey?</h2>
