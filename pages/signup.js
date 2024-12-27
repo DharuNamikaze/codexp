@@ -1,9 +1,9 @@
-"use client";
-import Link from "next/link";
+'use client'
 import React from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-function Login() {
+function SignUp() {
   const router = useRouter();
 
   async function handleSubmit(event) {
@@ -13,20 +13,21 @@ function Login() {
       const formData = new FormData(event.currentTarget);
 
       const username = formData.get("username");
+      const email = formData.get("email");
       const password = formData.get("password");
 
-      const response = await fetch(`/api/login`, {
+      const response = await fetch(`/api/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, email, password }),
       });
 
-      if (response.status === 200) {
-        router.push("/landingpage");
+      if (response.status === 201) {
+        router.push("/loginpage");
       } else {
-        console.error("Invalid credentials");
+        console.error("Failed to create user");
       }
     } catch (e) {
       console.error(e.message);
@@ -36,22 +37,24 @@ function Login() {
   return (
     <div className="h-screen flex justify-center items-center">
       <div className="form-container">
-        <p className="title">Login</p>
+        <p className="title">Sign Up</p>
         <form className="form" onSubmit={handleSubmit}>
           <div className="input-group">
             <label htmlFor="username">Username</label>
-            <input type="text" name="username" id="username" />
+            <input type="text" name="username" id="username" required />
+          </div>
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" id="email" required />
           </div>
           <div className="input-group">
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" id="password" />
-            <div className="forgot">
-              <a rel="noopener noreferrer" href="#">
-                Forgot Password ?
-              </a>
-            </div>
+            <input type="password" name="password" id="password" required />
           </div>
-          <button className="sign" type="submit" >Sign in</button>
+          &nbsp;
+          <button className="sign" type="submit">
+            Sign up
+          </button>
         </form>
         <div className="social-message">
           <div className="line" />
@@ -75,58 +78,11 @@ function Login() {
           </button> */}
         </div>
         <p className="signup">
-          Don&apos;t have an account?
-          <Link rel="noopener noreferrer" href="/signup" className>
-            {" "}
-            Sign up
-          </Link>
+          Already have an account?
+          <Link href="/loginpage"> Login</Link>
         </p>
       </div>
     </div>
   );
 }
-export default Login;
-
-// //pages/login
-// import { useSession } from "next-auth/react";
-// import Image from "next/image";
-// function Login(){
-//   const { data: session, status } = useSession();
-
-//     if (status === "loading") {
-//       return <div className="text-center py-4">Loading...</div>;
-//   }
-
-//   return (<>
-//   <div>
-//   <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
-//   {session ? (
-//                 <div className="bg-white p-6 rounded-lg shadow-md">
-//                     <p className="text-lg">Signed in as {session.user.email}</p>
-//                     <p className="text-sm text-gray-600">User ID: {session.user.id}</p>
-//                     {session.user.image && (
-//                         <Image src={session.user.image} alt="User Image" className="mt-4 rounded-full w-20 h-20" />
-//                     )}
-//                     <button
-//                         onClick={() => signOut()}
-//                         className="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-//                     >
-//                         Sign out
-//                     </button>
-//                 </div>
-//             ) : (
-//                 <div className="bg-white p-6 rounded-lg shadow-md">
-//                     <p className="text-lg mb-4">Not signed in</p>
-//                     <button
-//                         onClick={() => signIn("google")}
-//                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-//                     >
-//                         Sign in with Google
-//                     </button>
-//                 </div>
-//             )}
-//   </div>
-//   </div>
-//   </>);
-// }
-// export default Login;
+export default SignUp;
