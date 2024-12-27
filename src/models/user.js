@@ -1,5 +1,26 @@
 import { mongoose, Model, Schema, Document } from "mongoose";
 
+const userSchema = new Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+});
+
+export const User = mongoose.models.User ?? mongoose.model("User", userSchema);
+
+
+//typescript
+//-->
 // interface IUser extends Document {
 //     name: string;
 //     email: string;
@@ -25,23 +46,3 @@ import { mongoose, Model, Schema, Document } from "mongoose";
 // const User: Model<IUser> = mongoose.models.User || mongoose.model<IUser>("User", userSchema);
 
 // export default User;
-
-const userSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    password: {
-        type: String,
-        required: false,
-    },
-});
-
-const User = mongoose.models.User || mongoose.model("User", userSchema);
-
-export default User;

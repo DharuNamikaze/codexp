@@ -1,10 +1,7 @@
-// app/layout.jsx
-'use client';
 import './globals.css';
-import Link from 'next/link';
-import { useState, useLayoutEffect } from 'react';
-
-export default function RootLayout({ children }) {
+import { dbConnect } from '@/lib/mongodb';
+export default async function RootLayout({ children }) {
+  const conn = await dbConnect();
   return (
     <html lang="en">
       <body>

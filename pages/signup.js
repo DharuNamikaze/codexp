@@ -33,7 +33,7 @@ function SignUp() {
       console.error(e.message);
     }
   }
-
+  
   return (
     <div className="h-screen flex justify-center items-center">
       <div className="form-container">

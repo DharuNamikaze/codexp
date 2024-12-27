@@ -11,3 +11,9 @@ Google Oauth 2.0 ->
     import Google from "next-auth/providers/google"
 
 Mongodb -> 
+    /models/user -> created a schema for user
+    /lib/mongodb -> mongodb connection
+        import mongoose from "mongoose";
+
+bcrypt -> 
+    / for hashing passwords
